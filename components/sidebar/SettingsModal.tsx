@@ -61,14 +61,14 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, currentUser, onCl
         <Modal isOpen={isOpen} onClose={onClose}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="space-y-12">
-                    <div className="border-b border-gray-900/10 pb-12">
-                        <h2 className="text-base font-semibold leading-7 text-gray-900">
+                    <div className="border-b border-gray-900/10 pb-6 dark:border-zinc-600">
+                        <h2 className="text-xl font-semibold leading-7 text-gray-900 dark:text-zinc-100">
                             Profile
                         </h2>
-                        <p className="mt-1 text-sm leading-6 text-gray-600">
+                        <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-zinc-500">
                             Edit your public information
                         </p>
-                        <div className="mt-10 flex flex-col gap-y-8">
+                        <div className="mt-6 flex flex-col gap-y-8">
                             <Input
                                 disabled={isLoading}
                                 label="Name"
@@ -78,14 +78,14 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, currentUser, onCl
                                 register={register}
                             />
                             <div>
-                                <label className="block text-sm font-medium leading-6 text-gray-900">
+                                <label className="block text-sm font-medium leading-6 text-gray-900 dark:text-zinc-100">
                                     Photo
                                 </label>
                                 <div className="mt-2 flex items-center gap-x-3">
                                     <Image
                                         src={image || currentUser?.image || '/images/placeholder.jpg'}
-                                        width='48'
-                                        height='48'
+                                        width='80'
+                                        height='80'
                                         className="rounded-full"
                                         alt="Avatar"
                                     />
@@ -99,21 +99,16 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, currentUser, onCl
                                             secondary
                                             type="button"
                                         >
-                                            Change
+                                            <span className="dark:text-zinc-100">
+                                                Change
+                                            </span>
                                         </Button>
                                     </CldUploadButton>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="mt-6 flex items-center justify-end gap-x-6">
-                        <Button
-                            disabled={isLoading}
-                            secondary
-                            onClick={onClose}
-                        >
-                            Cancel
-                        </Button>
+                    <div className="flex items-center justify-end gap-x-6">
                         <Button
                             disabled={isLoading}
                             type='submit'
