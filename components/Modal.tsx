@@ -34,6 +34,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                         bg-gray-500 
                         bg-opacity-75 
                         transition-opacity
+                        dark:bg-zinc-800
+                        dark:bg-opacity-75
                         "
                     />
                 </Transition.Child>
@@ -65,7 +67,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                                     transform 
                                     overflow-hidden 
                                     rounded-lg 
-                                    bg-white 
+                                    bg-white
                                     px-4 
                                     pb-4
                                     pt-5 
@@ -77,6 +79,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                                     sm:w-full 
                                     sm:max-w-lg 
                                     sm:p-6
+                                    dark:bg-zinc-900
                                 "
                             >
                                 <div
@@ -84,24 +87,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                                         absolute 
                                         right-0 
                                         top-0 
-                                        hidden 
+                                        block
                                         pr-4 
                                         pt-4 
-                                        sm:block
                                         z-10
                                     "
                                 >
                                     <button
                                         type="button"
                                         className="
-                                            rounded-md 
-                                            bg-white 
-                                            text-gray-400 
-                                            hover:text-gray-500 
-                                            focus:outline-none 
-                                            focus:ring-2 
-                                            focus:ring-indigo-500 
-                                            focus:ring-offset-2
+                                            rounded-md bg-white text-gray-400 hover:text-gray-500 outline-none ring-1 ring-violet-500 dark:bg-zinc-900 dark:text-zinc-300 dark:ring-zinc-600 dark:hover:text-zinc-500
                                         "
                                         onClick={onClose}
                                     >
