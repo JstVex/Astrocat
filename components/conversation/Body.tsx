@@ -71,7 +71,7 @@ const Body: React.FC<BodyProps> = ({ initialMessages = [] }) => {
                     />
                 )
             })}
-            <div ref={bottomRef} className="pt-24" />
+            <div ref={bottomRef} className="pt-12" />
         </div>
     );
 }
