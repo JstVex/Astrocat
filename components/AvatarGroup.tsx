@@ -42,7 +42,7 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({
                     w-[21px] ${positionMap[index as keyof typeof positionMap]}`)}>
                     <Image
                         fill
-                        src={user?.image || '/images/placeholder.jpg'}
+                        src={user?.image || 'https://dsm01pap007files.storage.live.com/y4mdH7gn0qUQ8E76WN-QTWM9bIQi9IuOvHl7YUhRhXWHO5-aT_2AiZNTxg9zQHfEto3w3X_5o6mBoSzLuetWmB6lKJKPLxXRcXAzsZNfICw7LtFlMcLwmdNo_Asv8GelQORmBx_u5GTkRJaTsw5IyA0tsg5FHb_NsXXf67eTd4q2UnWhSrGsEt2K5iUBqiOJw_N?width=360&height=360&cropmode=none'}
                         alt="Avatar"
                     />
                 </div>
