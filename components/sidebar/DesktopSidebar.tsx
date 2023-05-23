@@ -24,19 +24,21 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
             />
             <div className="
                 hidden 
-                lg:fixed 
-                lg:inset-y-0 
-                lg:left-0 
-                lg:z-40 
-                lg:w-20 
+                md:fixed 
+                md:inset-y-0 
+                md:left-0 
+                md:z-40 
+                md:w-20 
                 xl:px-6
-                lg:overflow-y-auto 
-                lg:bg-white 
-                lg:border-r-[1px]
-                lg:pb-4
-                lg:flex
-                lg:flex-col
+                md:overflow-y-auto 
+                md:bg-white 
+                md:border-r-[1px]
+                md:pb-4
+                md:flex
+                md:flex-col
                 justify-between
+                dark:md:bg-black
+                dark:border-zinc-700
             ">
                 <nav className="mt-4 flex flex-col justify-between">
                     <ul role="list" className="flex flex-col items-center space-y-1">
@@ -53,7 +55,7 @@ const DesktopSidebar: React.FC<DesktopSidebarProps> = ({ currentUser }) => {
                     </ul>
                 </nav>
                 <nav className="mt-4 flex flex-col justify-between items-center">
-                    <div className="cursor-pointer hover:opacity-75 transition" onClick={() => setIsOpen(true)}>
+                    <div className="cursor-pointer hover:opacity-90 transition" onClick={() => setIsOpen(true)}>
                         <Avatar user={currentUser} />
                     </div>
                 </nav>

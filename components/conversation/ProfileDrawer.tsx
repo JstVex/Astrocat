@@ -74,13 +74,13 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                     leaveTo="translate-x-full"
                                 >
                                     <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                                        <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                                        <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl dark:bg-zinc-900">
                                             <div className="px-4 sm:px-6">
                                                 <div className="flex items-start justify-end">
                                                     <div className="ml-3 flex h-7 items-center">
                                                         <button
                                                             type="button"
-                                                            className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                                            className="rounded-md bg-white text-gray-400 hover:text-gray-500 outline-none ring-1 ring-violet-500 dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-600 dark:hover:text-zinc-500"
                                                             onClick={onClose}
                                                         >
                                                             <span className="sr-only">Close panel</span>
@@ -98,10 +98,10 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                             <Avatar user={otherUser} large={true} />
                                                         )}
                                                     </div>
-                                                    <div>
+                                                    <div className="dark:text-zinc-50">
                                                         {title}
                                                     </div>
-                                                    <div className="text-sm text-gray-500">
+                                                    <div className="text-sm text-gray-500 dark:text-zinc-400">
                                                         {statusText}
                                                     </div>
                                                     <div className="w-full pb-5 pt-5 sm:px-0 sm:pt-10">
@@ -115,6 +115,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                                         text-gray-500 
                                                                         sm:w-40 
                                                                         sm:flex-shrink-0
+                                                                        dark:text-zinc-400
                                                                         "
                                                                     >
                                                                         Emails
@@ -125,6 +126,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                                     text-sm 
                                                                     text-gray-900 
                                                                     sm:col-span-2
+                                                                    dark:text-zinc-100
                                                                     "
                                                                     >
                                                                         {data.users.map((user) => user.email).join(', ')}
@@ -140,6 +142,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                                     text-gray-500 
                                                                     sm:w-40 
                                                                     sm:flex-shrink-0
+                                                                     dark:text-zinc-400
                                                                     "
                                                                     >
                                                                         Email
@@ -150,6 +153,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                                     text-sm 
                                                                     text-gray-900 
                                                                     sm:col-span-2
+                                                                     dark:text-zinc-100
                                                                     "
                                                                     >
                                                                         {otherUser.email}
@@ -167,6 +171,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                                         text-gray-500 
                                                                         sm:w-40 
                                                                         sm:flex-shrink-0
+                                                                         dark:text-zinc-400
                                                                     "
                                                                         >
                                                                             Joined
@@ -177,6 +182,7 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                                         text-sm 
                                                                         text-gray-900 
                                                                         sm:col-span-2
+                                                                         dark:text-zinc-100
                                                                     "
                                                                         >
                                                                             <time dateTime={joinedDate}>
@@ -189,11 +195,11 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({ isOpen, onClose, data }) 
                                                         </dl>
                                                     </div>
                                                     <div className="flex gap-10 my-8">
-                                                        <div onClick={() => setConfirmOpen(true)} className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-75">
-                                                            <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center">
+                                                        <div onClick={() => setConfirmOpen(true)} className="flex flex-col gap-3 items-center cursor-pointer hover:opacity-90">
+                                                            <div className="w-10 h-10 bg-neutral-100 rounded-full flex items-center justify-center ">
                                                                 <IoTrash size={20} />
                                                             </div>
-                                                            <div className="text-sm font-light text-neutral-600">
+                                                            <div className="text-sm font-light text-neutral-600 dark:text-zinc-400">
                                                                 Delete
                                                             </div>
                                                         </div>

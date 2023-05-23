@@ -91,20 +91,22 @@ const ConversationList: React.FC<ConversationListProps> = ({ initialItems, users
                 users={users}
             />
             <aside className={clsx(`
-        fixed 
-        inset-y-0 
-        pb-20
-        lg:pb-0
-        lg:left-20 
-        lg:w-80 
-        lg:block
-        overflow-y-auto 
-        border-r 
-        border-gray-200 
-      `, isOpen ? 'hidden' : 'block w-full left-0')}>
+            fixed 
+            inset-y-0 
+            pb-20
+            md:pb-0
+            md:left-20 
+            md:w-80 
+            md:block
+            overflow-y-auto 
+            border-r 
+            border-gray-200
+            dark:bg-zinc-900 
+            dark:border-zinc-700
+        `, isOpen ? 'hidden' : 'block w-full left-0')}>
                 <div className="px-5">
                     <div className="flex justify-between mb-4 pt-4">
-                        <div className="text-2xl font-bold text-neutral-800">
+                        <div className="text-2xl font-bold text-neutral-800 dark:text-zinc-100">
                             Messages
                         </div>
                         <div
@@ -115,8 +117,12 @@ const ConversationList: React.FC<ConversationListProps> = ({ initialItems, users
                             bg-gray-100 
                             text-gray-600 
                             cursor-pointer 
-                            hover:opacity-75 
+                            hover:opacity-90
                             transition
+                            dark:bg-zinc-900
+                            ring-1 
+                            dark:ring-white/30
+                            dark:text-zinc-200
                         "
                         >
                             <MdOutlineGroupAdd size={20} />

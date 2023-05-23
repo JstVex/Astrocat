@@ -2,7 +2,7 @@
 
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { ClipLoader } from 'react-spinners';
+import { PulseLoader } from 'react-spinners';
 
 const LoadingModal = () => {
     return (
@@ -24,6 +24,8 @@ const LoadingModal = () => {
                         bg-gray-100 
                         bg-opacity-50 
                         transition-opacity
+                        dark:bg-zinc-900
+                        dark:bg-opacity-50
                         "
                     />
                 </Transition.Child>
@@ -50,7 +52,7 @@ const LoadingModal = () => {
                         >
                             <Dialog.Panel>
                                 {/* <div>Loading...</div> */}
-                                <ClipLoader size={40} color="#0284c7" />
+                                <PulseLoader size={10} color="#9333ea" />
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>

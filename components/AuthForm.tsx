@@ -98,7 +98,7 @@ export default function AuthForm() {
 
     return (
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
+            <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10 dark:bg-zinc-800/50">
                 <form className="" onSubmit={handleSubmit(onSubmit)}>
                     {variant === 'register' && (
                         <Input label="Name" id="name" register={register} errors={errors} disabled={isLoading} />
@@ -108,18 +108,21 @@ export default function AuthForm() {
 
                     <Input label="Password" id="password" type="password" register={register} errors={errors} disabled={isLoading} />
 
-                    <Button disabled={isLoading} fullWidth type="submit">
-                        {variant === 'login' ? 'Sign in' : 'Register'}
-                    </Button>
+                    <div className="mt-6">
+                        <Button disabled={isLoading} fullWidth type="submit">
+                            {variant === 'login' ? 'Sign in' : 'Register'}
+                        </Button>
+                    </div>
+
                 </form>
 
                 <div className="mt-6">
                     <div className="relative">
                         <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t border-gray-300" />
+                            <div className="w-full border-t border-gray-300 dark:border-zinc-300" />
                         </div>
                         <div className="relative flex justify-center text-sm">
-                            <span className="bg-white px-2 text-gray-500">
+                            <span className="bg-white px-2 text-gray-500 dark:bg-zinc-800 dark:text-zinc-400">
                                 Or continue with
                             </span>
                         </div>
@@ -130,7 +133,7 @@ export default function AuthForm() {
                         <AuthSocialButton onClick={() => socialActions('google')} icon={BsGoogle} />
                     </div>
                 </div>
-                <div className="flex gap-2 justify-center text-sm mt-6 px-2 text-zinc-500">
+                <div className="flex gap-2 justify-center text-sm mt-6 px-2 text-zinc-500 dark:text-zinc-400">
                     <div>
                         {variant === 'login' ? 'New to Astrocat?' : 'Already have an account?'}
                     </div>

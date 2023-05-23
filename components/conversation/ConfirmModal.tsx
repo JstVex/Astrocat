@@ -49,7 +49,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
                         items-center 
                         justify-center 
                         rounded-full 
-                        bg-red-100 
+                      bg-red-50
                         sm:mx-0 
                         sm:h-10 
                         sm:w-10
@@ -62,40 +62,33 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
                 </div>
                 <div
                     className="
-            mt-3 
-            text-center 
-            sm:ml-4 
-            sm:mt-0 
-            sm:text-left
-          "
+                        mt-3 
+                        text-center 
+                        sm:ml-4 
+                        sm:mt-0 
+                        sm:text-left
+                    "
                 >
                     <Dialog.Title
                         as="h3"
-                        className="text-base font-semibold leading-6 text-gray-900"
+                        className="text-base font-semibold leading-6 text-gray-900 dark:text-zinc-100"
                     >
                         Delete conversation
                     </Dialog.Title>
                     <div className="mt-2">
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm text-gray-500 dark:text-zinc-400">
                             Are you sure you want to delete this conversation? This action cannot be undone.
                         </p>
                     </div>
                 </div>
             </div>
-            <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
+            <div className="mt-5 sm:mt-4 flex justify-center sm:justify-end">
                 <Button
                     disabled={isLoading}
                     danger
                     onClick={onDelete}
                 >
                     Delete
-                </Button>
-                <Button
-                    disabled={isLoading}
-                    secondary
-                    onClick={onClose}
-                >
-                    Cancel
                 </Button>
             </div>
         </Modal>
