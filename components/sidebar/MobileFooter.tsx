@@ -3,12 +3,19 @@
 import useConversation from "@/hooks/useConversation";
 import useRoutes from "@/hooks/useRoutes";
 import MobileItem from "./MobileItem";
+import { usePathname } from "next/navigation";
 
 const MobileFooter = () => {
     const routes = useRoutes();
     const { isOpen } = useConversation();
 
+    const pathname = usePathname();
+
     if (isOpen) {
+        return null;
+    }
+
+    if (pathname?.includes('astro/new')) {
         return null;
     }
 
