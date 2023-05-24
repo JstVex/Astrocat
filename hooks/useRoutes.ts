@@ -26,10 +26,10 @@ const useRoutes = () => {
             active: pathname === '/users'
         },
         {
-            label: 'Astrocat',
-            href: '/astrocat',
+            label: 'Astro',
+            href: '/astro',
             icon: IoLogoOctocat,
-            active: pathname === '/astrocats'
+            active: pathname === '/astro'
         },
         {
             label: 'Logout',
