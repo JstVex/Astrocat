@@ -59,3 +59,18 @@ export async function POST(
     }
 }
 
+export async function DELETE() {
+    try {
+        const currentUser = await getCurrentUser();
+
+        const deleteMessages = await prisma.astro.deleteMany({
+            where: {
+                senderId: currentUser?.id
+            }
+        })
+
+        return NextResponse.json(deleteMessages);
+    } catch (error: any) {
+        return new NextResponse(`Internal Error: ${error}`, { status: 500 })
+    }
+}
