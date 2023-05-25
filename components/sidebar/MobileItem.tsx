@@ -34,6 +34,8 @@ const MobileItem: React.FC<MobileItemProps> = ({
                 w-full 
                 justify-center 
                 p-4 
+                border-x-[0.5px]
+                border-zinc-300
                 transition
                 duration-300
               text-gray-500 
@@ -42,6 +44,7 @@ const MobileItem: React.FC<MobileItemProps> = ({
                 dark:text-zinc-200
                 dark:hover:bg-zinc-800
                 dark:hover:text-zinc-200
+                dark:border-zinc-700
             `,
                 active && 'bg-gray-100 text-black dark:bg-zinc-800',
             )}>
