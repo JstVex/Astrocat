@@ -15,7 +15,7 @@ const MobileFooter = () => {
         return null;
     }
 
-    if (pathname?.includes('astro/new')) {
+    if (pathname?.includes('/astro')) {
         return null;
     }
 
