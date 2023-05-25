@@ -7,7 +7,7 @@ export default function Home() {
         {/* <div className="">
           logo
         </div> */}
-        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+        <h2 className="mt-6 text-center text-3xl font-bold animate-text bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-violet-500 tracking-tight ">
           Start your journey with Astrocat!
         </h2>
       </div>
