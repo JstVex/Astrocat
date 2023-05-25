@@ -29,6 +29,7 @@
     "next-auth": "^4.22.1",
     "next-cloudinary": "^4.10.1",
     "next-superjson-plugin": "^0.5.7",
+    "openai": "^3.2.1",
     "postcss": "8.4.23",
     "prisma": "^4.14.0",
     "pusher": "^5.1.3",
