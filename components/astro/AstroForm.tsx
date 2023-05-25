@@ -27,8 +27,10 @@ const AstroForm = () => {
         setValue('message', '', { shouldValidate: true });
 
         axios.post('/api/astro', {
-            ...data,
+            ...data
         })
+            .then(() => console.log('data is', data))
+            .catch((error) => console.log('axios error', error.response.data))
     }
 
     return (
