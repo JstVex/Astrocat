@@ -28,6 +28,7 @@ model User {
 
   accounts Account[]
   messages Message[]
+  astros   Astro[]
 }
 
 model Account {
@@ -74,6 +75,16 @@ model Message {
 
   conversationId String       @db.ObjectId
   conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  senderId String @db.ObjectId
+  sender   User   @relation(fields: [senderId], references: [id], onDelete: Cascade)
+}
+
+model Astro {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  messageBySender String?
+  messageByAstro  String?
+  createdAt       DateTime @default(now())
 
   senderId String @db.ObjectId
   sender   User   @relation(fields: [senderId], references: [id], onDelete: Cascade)
