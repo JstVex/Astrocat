@@ -11,6 +11,7 @@ import { Input } from "../Inputs/Input";
 import Image from "next/image";
 import { CldUploadButton } from "next-cloudinary";
 import { Button } from "../Button";
+import { useTheme } from "next-themes";
 
 interface SettingsModalProps {
     isOpen?: boolean,
@@ -21,6 +22,20 @@ interface SettingsModalProps {
 const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, currentUser, onClose }) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
+
+    const { theme, setTheme } = useTheme();
+    const systemTheme = 'dark'
+
+    let currentTheme = theme === 'system' ? systemTheme : theme;
+
+    const toggleTheme = () => {
+        if (currentTheme === 'dark') {
+            setTheme('light')
+        }
+        if (currentTheme === 'light') {
+            setTheme('dark')
+        }
+    }
 
     const {
         register,
@@ -109,6 +124,9 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, currentUser, onCl
                         </div>
                     </div>
                     <div className="flex items-center justify-end gap-x-6">
+                        <div onClick={toggleTheme} className="border border-zinc-600 p-4 text-zinc-300 cursor-pointer">
+                            Toggle
+                        </div>
                         <Button
                             disabled={isLoading}
                             type='submit'
