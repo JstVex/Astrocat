@@ -121,6 +121,7 @@ const ConversationList: React.FC<ConversationListProps> = ({ initialItems, users
                             transition
                             dark:bg-zinc-900
                             ring-1 
+                            ring-zinc-900/50
                             dark:ring-white/30
                             dark:text-zinc-200
                         "

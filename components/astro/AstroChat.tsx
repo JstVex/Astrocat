@@ -7,7 +7,7 @@ const AstroChat = async () => {
     const messages = await getAstroMessages();
 
     return (
-        <div className="h-full bg-zinc-100 dark:bg-zinc-900">
+        <div className="h-full bg-white dark:bg-zinc-900">
             <div className="h-full flex flex-col">
                 <AstroHeader />
                 <AstroBody messages={messages} />

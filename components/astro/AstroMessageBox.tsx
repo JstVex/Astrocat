@@ -28,14 +28,14 @@ const AstroMessageBox: React.FC<AstroMessageBoxProps> = ({ data }) => {
 
     const message = clsx(
         "text-sm w-fit overflow-hidden rounded-2xl py-2 px-3",
-        data.messageBySender ? 'bg-violet-500 text-white' : 'bg-gray-100 dark:bg-zinc-700 dark:text-zinc-100',
+        data.messageBySender ? 'bg-violet-500 text-white' : 'text-zinc-800      bg-gray-100 dark:bg-zinc-700 dark:text-zinc-100',
     )
 
     return (
         <div className={container}>
             <div className={avatar}>
                 {data.messageBySender && <Avatar user={data.sender} />}
-                {data.messageByAstro && <IoLogoOctocat className="text-zinc-200" size={25} />}
+                {data.messageByAstro && <IoLogoOctocat className="text-zinc-800 dark:text-zinc-200" size={25} />}
 
             </div>
             <div className={body}>

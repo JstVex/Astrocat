@@ -25,7 +25,7 @@ const AstroHeader = () => {
                         <div className="dark:text-zinc-100">
                             Astro
                         </div>
-                        <div className="text-sm font-light text-zinc-400">
+                        <div className="text-sm font-light text-gray-400 dark:text-zinc-400">
                             Always available
                         </div>
                     </div>
