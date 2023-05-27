@@ -3,6 +3,7 @@ import './globals.css'
 
 import AuthContext from '@/context/AuthContext'
 import ToasterContext from '@/context/ToasterContext'
+import { Providers } from './providers'
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,12 +16,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className='dark:bg-zinc-900'>
         <AuthContext>
           <ActiveStatus />
           <ToasterContext />
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </AuthContext>
       </body>
     </html>
