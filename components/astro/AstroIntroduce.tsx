@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const AstroIntroduce = () => {
     const [confirmOpen, setConfirmOpen] = useState(false);
+
     return (
         <>
             <DeleteAstro
@@ -18,14 +19,6 @@ const AstroIntroduce = () => {
                         <div className='text-3xl text-center font-bold py-4 animate-text bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-violet-500'>
                             Astro is here!
                         </div>
-                        {/* <Link href='/astro/new'>
-                        <div className="flex items-center rounded-md my-4 p-4 w-full border dark:border-zinc-700 dark:hover:bg-zinc-800">
-                            <AiOutlinePlus className="text-zinc-100" size={25} />
-                            <div className="ml-5 dark:text-zinc-100">
-                                Start a new chat
-                            </div>
-                        </div>
-                        </Link> */}
                         <div className="text-sm text-zinc-800 dark:text-zinc-300 text-center space-y-4">
 
                             <div className="text-xl">
@@ -59,8 +52,8 @@ const AstroIntroduce = () => {
                                     Delete
                                 </div>
                             </div> */}
-                            <div onClick={() => setConfirmOpen(true)} className="flex items-center rounded-md my-4 p-4 w-full border dark:border-zinc-700 dark:hover:bg-zinc-800">
-                                <IoTrash className="text-zinc-100" size={25} />
+                            <div onClick={() => setConfirmOpen(true)} className="flex items-center rounded-md my-4 p-4 w-full cursor-pointer border border-zinc-600 hover:bg-zinc-50 dark:border-zinc-700 dark:hover:bg-zinc-800">
+                                <IoTrash className="text-zinc-800 dark:text-zinc-100" size={25} />
                                 <div className="ml-5 dark:text-zinc-100">
                                     Delete the conversation
                                 </div>
