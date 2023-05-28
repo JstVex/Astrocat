@@ -30,13 +30,7 @@ const useRoutes = () => {
             href: '/astro',
             icon: IoLogoOctocat,
             active: pathname === '/astro'
-        },
-        {
-            label: 'Logout',
-            href: '/#',
-            onClick: () => signOut(),
-            icon: HiArrowLeftOnRectangle
-        },
+        }
     ], [pathname, conversationId]);
 
     return routes;
